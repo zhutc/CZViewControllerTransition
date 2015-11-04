@@ -10,29 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZBaseAnimator.m"
-            timestampString = "468302464.775343"
+            timestampString = "468307034.845571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-CZAnimator_popViewControllerAnimated:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZBaseAnimator.m"
-            timestampString = "468302464.775343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "-CZAnimator_popViewControllerAnimated:"
-            landmarkType = "5">
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "@implementation UIViewController(CZAnimator)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/ViewController.m"
-            timestampString = "468302464.775343"
+            timestampString = "468305855.5125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-pop:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZBaseAnimator.m"
-            timestampString = "468302475.409659"
+            timestampString = "468307034.845571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "-CZAnimator_popViewControllerAnimated:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZBaseAnimator.m"
-            timestampString = "468302476.579218"
+            timestampString = "468307034.845571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "-CZAnimator_pushViewController:animated:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CZViewControllerTransition/CZBaseAnimator.m"
+            timestampString = "468307034.654093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "+load"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

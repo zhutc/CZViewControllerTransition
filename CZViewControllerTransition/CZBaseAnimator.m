@@ -146,8 +146,6 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
         }
         [self.navigationController presentViewController:vc animated:YES completion:nil];
     }
-    
-    
 }
  
  */
@@ -175,12 +173,7 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
             return [self.navigationController CZAnimator_popViewControllerAnimated:animate];
         }
     }
-        
-    
     return nil;
-    
-    
-    
 }
 */
 
@@ -203,13 +196,31 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
     };
     
     for (int i = 0 ; i < sizeof(selectors)/sizeof(SEL); i++) {
+        Class hockClass = [UINavigationController class];
+        
         SEL orginalSEL = selectors[i];
         SEL newSEL =  NSSelectorFromString([@"CZAnimator_" stringByAppendingString:NSStringFromSelector(orginalSEL)]);
        
-        Method orginalMd = class_getInstanceMethod([UINavigationController class], orginalSEL);
-        Method newMd = class_getInstanceMethod([UINavigationController class], newSEL);
+        Method orginalMd = class_getInstanceMethod(hockClass, orginalSEL);
+        Method newMd = class_getInstanceMethod(hockClass, newSEL);
+        
+        BOOL isNewMdIsImp = class_addMethod(hockClass,
+                                            orginalSEL,
+                                            class_getMethodImplementation(hockClass, newSEL),
+                                            method_getTypeEncoding(newMd));
+        if (isNewMdIsImp) {
+            
+            class_replaceMethod(hockClass,
+                                newSEL,
+                                class_getMethodImplementation(hockClass, orginalSEL),
+                                method_getTypeEncoding(orginalMd));
+        }
+        else
+        {
+            method_exchangeImplementations(orginalMd, newMd);
+        }
+        
        
-        method_exchangeImplementations(orginalMd, newMd);
     }
     
 }
