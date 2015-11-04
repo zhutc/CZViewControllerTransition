@@ -177,3 +177,52 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
 @end
 
 
+
+
+
+@implementation UINavigationController (CZAnimator)
+
++(void)load
+{
+    
+    SEL selectors[] = {
+        @selector(popViewControllerAnimated:),
+        @selector(pushViewController:animated:)
+    };
+    
+    for (int i = 0 ; i < sizeof(selectors)/sizeof(SEL); i++) {
+        SEL orginalSEL = selectors[i];
+        SEL newSEL =  NSSelectorFromString([@"CZAnimator_" stringByAppendingString:NSStringFromSelector(orginalSEL)]);
+       
+        Method orginalMd = class_getInstanceMethod([UINavigationController class], orginalSEL);
+        Method newMd = class_getInstanceMethod([UINavigationController class], newSEL);
+       
+        method_exchangeImplementations(orginalMd, newMd);
+    }
+    
+}
+
+-(UIViewController *)CZAnimator_popViewControllerAnimated:(BOOL)animated
+{
+    id<UINavigationControllerDelegate> animator = self.topViewController.popViewControllerTransitionAnimator;
+    if (animator) {
+        self.delegate = animator;
+    }
+    return  [self CZAnimator_popViewControllerAnimated:animated];
+}
+
+-(void)CZAnimator_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    id<UINavigationControllerDelegate> animator = viewController.pushViewControllerTransitionAnimator;
+    if (animator) {
+        self.delegate = animator;
+    }
+    [self CZAnimator_pushViewController:viewController animated:animated];
+
+}
+
+
+@end
+
+
+
