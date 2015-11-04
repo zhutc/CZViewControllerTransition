@@ -9,7 +9,7 @@
 #import "CZCurlAnimator.h"
 
 
-id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZCurlAnimator)(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZCurlAnimator)(CZBaseAnimatorTransitionType type)
 {
     CZCurlAnimator* animator = [CZCurlAnimator new];
     animator.animatorType = type;

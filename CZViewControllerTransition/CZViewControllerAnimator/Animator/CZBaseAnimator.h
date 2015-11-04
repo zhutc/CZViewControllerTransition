@@ -14,7 +14,7 @@
 @property(nonatomic , assign , readwrite) CGFloat duration;
 @property(nonatomic , assign , readwrite) CZBaseAnimatorTransitionType animatorType;
 
-//subclass override this method
+//subclass must override this method
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
       fromViewController:(UIViewController*)fromVC
         toViewController:(UIViewController*)toVC

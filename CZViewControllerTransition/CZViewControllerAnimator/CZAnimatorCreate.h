@@ -50,10 +50,6 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 
 
 
-/*
- //翻页动画
- extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionType type);
- */
 
 
 /**
@@ -62,6 +58,12 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 #ifdef CZAnimatorCreateInterface//(ClassName)
 //翻页动画
 CZAnimatorCreateInterface(CZCurlAnimator);
+CZAnimatorCreateInterface(CZBackScaleAnimator);
+
+/*
+ //翻页动画
+ extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionType type);
+ */
 
 
 #endif
