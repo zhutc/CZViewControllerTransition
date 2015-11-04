@@ -15,7 +15,7 @@
 		0A3EAA3D1BE8A52A0019DD90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EAA3B1BE8A52A0019DD90 /* LaunchScreen.storyboard */; };
 		0A3EAA481BE8A52A0019DD90 /* CZViewControllerTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA471BE8A52A0019DD90 /* CZViewControllerTransitionTests.m */; };
 		0A3EAA531BE8A52A0019DD90 /* CZViewControllerTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA521BE8A52A0019DD90 /* CZViewControllerTransitionUITests.m */; };
-		0A3EAA621BE8AD990019DD90 /* CZBaseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA611BE8AD990019DD90 /* CZBaseAnimator.m */; };
+		0AEE81E21BE9DB7500D5B332 /* CZBaseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81E11BE9DB7500D5B332 /* CZBaseAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,10 @@
 		0A3EAA4E1BE8A52A0019DD90 /* CZViewControllerTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZViewControllerTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3EAA521BE8A52A0019DD90 /* CZViewControllerTransitionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZViewControllerTransitionUITests.m; sourceTree = "<group>"; };
 		0A3EAA541BE8A52A0019DD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A3EAA601BE8AD990019DD90 /* CZBaseAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBaseAnimator.h; sourceTree = "<group>"; };
-		0A3EAA611BE8AD990019DD90 /* CZBaseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseAnimator.m; sourceTree = "<group>"; };
 		0AEE81DD1BE9D58700D5B332 /* UIViewController+CZAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAnimator.h"; sourceTree = "<group>"; };
 		0AEE81DE1BE9D69500D5B332 /* CZAnimatorCreate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAnimatorCreate.h; sourceTree = "<group>"; };
+		0AEE81E01BE9DB7500D5B332 /* CZBaseAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBaseAnimator.h; sourceTree = "<group>"; };
+		0AEE81E11BE9DB7500D5B332 /* CZBaseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +106,11 @@
 		0A3EAA2C1BE8A52A0019DD90 /* CZViewControllerTransition */ = {
 			isa = PBXGroup;
 			children = (
+				0AEE81DF1BE9DB5400D5B332 /* Animator */,
 				0A3EAA301BE8A52A0019DD90 /* AppDelegate.h */,
 				0A3EAA311BE8A52A0019DD90 /* AppDelegate.m */,
 				0A3EAA331BE8A52A0019DD90 /* ViewController.h */,
 				0A3EAA341BE8A52A0019DD90 /* ViewController.m */,
-				0A3EAA601BE8AD990019DD90 /* CZBaseAnimator.h */,
-				0A3EAA611BE8AD990019DD90 /* CZBaseAnimator.m */,
 				0AEE81DD1BE9D58700D5B332 /* UIViewController+CZAnimator.h */,
 				0AEE81DE1BE9D69500D5B332 /* CZAnimatorCreate.h */,
 				0A3EAA361BE8A52A0019DD90 /* Main.storyboard */,
@@ -147,6 +146,15 @@
 				0A3EAA541BE8A52A0019DD90 /* Info.plist */,
 			);
 			path = CZViewControllerTransitionUITests;
+			sourceTree = "<group>";
+		};
+		0AEE81DF1BE9DB5400D5B332 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				0AEE81E01BE9DB7500D5B332 /* CZBaseAnimator.h */,
+				0AEE81E11BE9DB7500D5B332 /* CZBaseAnimator.m */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +289,7 @@
 			files = (
 				0A3EAA351BE8A52A0019DD90 /* ViewController.m in Sources */,
 				0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */,
-				0A3EAA621BE8AD990019DD90 /* CZBaseAnimator.m in Sources */,
+				0AEE81E21BE9DB7500D5B332 /* CZBaseAnimator.m in Sources */,
 				0A3EAA2F1BE8A52A0019DD90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
