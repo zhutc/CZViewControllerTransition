@@ -50,7 +50,7 @@
 {
     ViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(self.class)];
 
-    [self CZAnimator_showViewController:vc sender:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

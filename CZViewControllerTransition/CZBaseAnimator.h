@@ -39,20 +39,27 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 @property(nonatomic , strong) id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> pushAnimator;
 @property(nonatomic , strong) id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> popAnimator;
 
+
+//2015.11.4 摒弃这些方法,原因，开发都习惯使用self.navigationController push and pop 。。。。
+/*
 -(void)CZAnimator_showViewController:(UIViewController *)vc sender:(id)sender;
+ */
  /*
   *hock UINavigationController 's popViewControllerAnimated: 
   *
   */
+/*
 -(UIViewController*)CZAnimator_popViewControllerAnimated:(BOOL)animate;
+*/
 
 @end
 
 
-
+//2015.11.4 添加入栈出栈方法，替换掉ViewController分类中的入栈出栈方法
 @interface UINavigationController (CZAnimator)
 //hock POP and push
 -(void)CZAnimator_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 -(UIViewController *)CZAnimator_popViewControllerAnimated:(BOOL)animated;
 
 @end

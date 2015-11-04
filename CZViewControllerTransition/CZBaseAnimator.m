@@ -89,7 +89,10 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
 #define CZ_Version [[[UIDevice currentDevice] systemVersion] floatValue]
 
 @implementation UIViewController (CZAnimator)
+//2015.11.4 摒弃这些方法
+
 //尝试跨类hock
+/*
 +(void)load
 {
     SEL navPop = @selector(popViewControllerAnimated:);
@@ -99,6 +102,7 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
     
     method_exchangeImplementations(navPopMd, minePopMd);
 }
+ */
 
 -(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)pushAnimator
 {
@@ -120,7 +124,9 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
     objc_setAssociatedObject(self, UIViewController_CZAnimator_PopKey, animator, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
 }
+//2015.11.4 摒弃这些方法
 
+/*
 -(void)CZAnimator_showViewController:(UIViewController *)vc sender:(id)sender
 {
     CGFloat version = CZ_Version;
@@ -143,10 +149,16 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
     
     
 }
+ 
+ */
 
 /**
  ** swillzing navigationController的POP，所以这里的self = vc.navigationController
  **/
+
+//2015.11.4 摒弃这些方法
+
+/*
 -(UIViewController*)CZAnimator_popViewControllerAnimated:(BOOL)animate
 {
     UINavigationController* mianSelf = (UINavigationController*)self;
@@ -170,7 +182,7 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
     
     
 }
-
+*/
 
 
 
