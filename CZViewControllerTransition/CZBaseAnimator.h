@@ -50,4 +50,12 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 
 
 
+@interface UINavigationController (CZAnimator)
+//hock POP and push
+-(void)CZAnimator_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+-(UIViewController *)CZAnimator_popViewControllerAnimated:(BOOL)animated;
+
+@end
+
+
 
