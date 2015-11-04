@@ -15,6 +15,7 @@
 @property(nonatomic , assign , readwrite) CZBaseAnimatorTransitionType animatorType;
 
 //subclass must override this method
+// 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
       fromViewController:(UIViewController*)fromVC
         toViewController:(UIViewController*)toVC

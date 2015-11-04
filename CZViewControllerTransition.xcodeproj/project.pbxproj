@@ -18,6 +18,7 @@
 		0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81E61BE9DC0400D5B332 /* CZBaseAnimator.m */; };
 		0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */; };
 		0AEE81EF1BE9F29500D5B332 /* CZBackScaleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81EE1BE9F29500D5B332 /* CZBackScaleAnimator.m */; };
+		0AEE81F21BEA00B400D5B332 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81F11BEA00B400D5B332 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCurlAnimator.m; sourceTree = "<group>"; };
 		0AEE81ED1BE9F29500D5B332 /* CZBackScaleAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBackScaleAnimator.h; sourceTree = "<group>"; };
 		0AEE81EE1BE9F29500D5B332 /* CZBackScaleAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBackScaleAnimator.m; sourceTree = "<group>"; };
+		0AEE81F01BEA00B400D5B332 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		0AEE81F11BEA00B400D5B332 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				0AEE81E31BE9DBD800D5B332 /* CZViewControllerAnimator */,
 				0A3EAA301BE8A52A0019DD90 /* AppDelegate.h */,
 				0A3EAA311BE8A52A0019DD90 /* AppDelegate.m */,
+				0AEE81F01BEA00B400D5B332 /* TableViewController.h */,
+				0AEE81F11BEA00B400D5B332 /* TableViewController.m */,
 				0A3EAA331BE8A52A0019DD90 /* ViewController.h */,
 				0A3EAA341BE8A52A0019DD90 /* ViewController.m */,
 				0A3EAA361BE8A52A0019DD90 /* Main.storyboard */,
@@ -310,6 +315,7 @@
 				0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */,
 				0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */,
 				0A3EAA2F1BE8A52A0019DD90 /* main.m in Sources */,
+				0AEE81F21BEA00B400D5B332 /* TableViewController.m in Sources */,
 				0AEE81EF1BE9F29500D5B332 /* CZBackScaleAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,17 +37,18 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
     
     //设置frame
     CGRect toEndFrame = fromVC.view.frame;
-    
-    
-    
-    
     toVC.view.frame = toEndFrame;
+    
+    //显示周期
+    
+    
     
     UIViewAnimationTransition type = UIViewAnimationTransitionCurlDown;
     switch (self.animatorType) {
         case CZBaseAnimatorTransitionTypePush:
         {
             type = UIViewAnimationTransitionCurlDown;
+//            [fromVC];
         }
             break;
         case CZBaseAnimatorTransitionTypePop:
@@ -56,6 +57,8 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         default:
             break;
     }
+    
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:duration];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];

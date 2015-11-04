@@ -12,14 +12,7 @@
 @end
 
 @implementation ViewController
-//- (instancetype)initWithAnimator:(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)animator
-//{
-//    self = [super init];
-//    if (self) {
-//        self.animator = animator;
-//    }
-//    return self;
-//}
+
 - (void)viewDidLoad {
     
     NSUInteger tmp = arc4random()%255;
@@ -28,10 +21,45 @@
     [super viewDidLoad];
     
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+}
+
+
+
+
+
 - (id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)pushViewControllerTransitionAnimator
 {
+    if ([self.animatorClassName isEqualToString:@"CZCurlAnimator"]) {
+        self.pushAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePush);
+    }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
+    {
+        self.pushAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePush);
+    }
 
-    self.pushAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePush);
+    
     return self.pushAnimator;
 }
 
@@ -39,15 +67,23 @@
 -(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)popViewControllerTransitionAnimator
 {
  
-    self.popAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePop);
+    if ([self.animatorClassName isEqualToString:@"CZCurlAnimator"]) {
+        self.popAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePop);
+        
+    }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
+    {
+        self.popAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePop);
+    }
     
     return self.popAnimator;
 }
 
 -(IBAction)push:(id)sender
 {
+    static int title = 0;
     ViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(self.class)];
-
+    vc.title = @(++title).description;
+    vc.animatorClassName = self.animatorClassName;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

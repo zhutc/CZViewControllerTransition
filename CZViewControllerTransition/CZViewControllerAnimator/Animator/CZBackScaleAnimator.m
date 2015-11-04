@@ -49,7 +49,6 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         CGPoint transformedPoint = CGPointApplyAffineTransform(startRect.origin, toVC.view.transform);
         toVC.view.frame = CGRectMake(transformedPoint.x, transformedPoint.y, startRect.size.width, startRect.size.height);
         
-        [fromVC beginAppearanceTransition:NO animated:YES];
 
         
         [UIView animateWithDuration:duration
@@ -67,7 +66,6 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
                          } completion:^(BOOL finished) {
                              fromVC.view.alpha = 1.0f;
                              fromVC.view.transform = CGAffineTransformIdentity;
-                             [fromVC endAppearanceTransition];
 
                              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                          }];
@@ -93,7 +91,6 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         CGPoint transformedPoint = CGPointApplyAffineTransform(endRect.origin, fromVC.view.transform);
         endRect = CGRectMake(transformedPoint.x, transformedPoint.y, endRect.size.width, endRect.size.height);
         
-            [toVC beginAppearanceTransition:YES animated:YES];
         
         
         
@@ -109,7 +106,6 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
                              toVC.view.layer.transform = CATransform3DIdentity;
 
                          } completion:^(BOOL finished) {
-                             [toVC endAppearanceTransition];
 
                              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                          }];
