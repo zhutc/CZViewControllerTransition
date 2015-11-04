@@ -31,7 +31,7 @@
 - (id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)pushViewControllerTransitionAnimator
 {
 
-    self.pushAnimator = CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionTypePush);
+    self.pushAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePush);
     return self.pushAnimator;
 }
 
@@ -39,7 +39,7 @@
 -(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)popViewControllerTransitionAnimator
 {
  
-    self.popAnimator = CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionTypePop);
+    self.popAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePop);
     
     return self.popAnimator;
 }

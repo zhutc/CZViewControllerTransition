@@ -7,15 +7,16 @@
 //
 
 #import "CZBaseAnimator.h"
-#define CZBaseAnimatorDuration (0.35f)
 
-
+/****  快速获取动画器，样例实现，这样写的目的是隐蔽 CZBaseAnimator.h 头文件暴露 ****/
+/*
 id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionType type)
 {
     CZBaseAnimator* animator = [CZBaseAnimator new];
     animator.animatorType = type;
     return animator;
 }
+*/
 
 
 @implementation CZBaseAnimator
@@ -39,53 +40,32 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAn
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    //添加ToVC View
-    if (!toVC.view.superview) {
-        [superView insertSubview:toVC.view belowSubview:fromVC.view];
-    }else if ([toVC.view.superview isEqual:superView])
-    {
-        [toVC.view removeFromSuperview];
-        [superView insertSubview:toVC.view belowSubview:fromVC.view];
-    }
-    
-    //设置frame
-    CGRect toBeginFrame = fromVC.view.frame;
-    CGRect toEndFrame = fromVC.view.frame;
-    CGRect fromBeginFrame = fromVC.view.frame;
-    CGRect fromEndFrame = fromVC.view.frame;
-    
-    
-    toVC.view.frame = toEndFrame;
 
-    UIViewAnimationTransition type = UIViewAnimationTransitionCurlDown;
-    switch (self.animatorType) {
-        case CZBaseAnimatorTransitionTypePush:
-        {
-            type = UIViewAnimationTransitionCurlDown;
-        }
-            break;
-        case CZBaseAnimatorTransitionTypePop:
-            type = UIViewAnimationTransitionCurlUp;
-            break;
-        default:
-            break;
-    }
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:duration];
-    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    [UIView setAnimationTransition:type forView:superView cache:NO];
-    [superView bringSubviewToFront:toVC.view];
-    [CATransaction setCompletionBlock:^{
-        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-    }];
-    [UIView commitAnimations];
     
+    
+    [self animateTransition:transitionContext
+         fromViewController:fromVC
+           toViewController:toVC
+                containView:superView
+                   duration:duration];
+
 
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     return self.duration ? self.duration : CZBaseAnimatorDuration;
+}
+
+
+#pragma mark - 子类实现具体的动画内容
+-(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
+      fromViewController:(UIViewController *)fromVC
+        toViewController:(UIViewController *)toVC
+             containView:(UIView *)containView
+                duration:(NSTimeInterval)duration
+{
+    NSAssert(![self isMemberOfClass:[CZBaseAnimator class]],@"***********************************\n请使用CZBaseAnimator的子类，并重载|\nanimateTransition:\nfromViewController:\ntoViewController:\ncontainView:\nduration: |方法\n***********************************" );
 }
 
 @end

@@ -16,6 +16,7 @@
 		0A3EAA481BE8A52A0019DD90 /* CZViewControllerTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA471BE8A52A0019DD90 /* CZViewControllerTransitionTests.m */; };
 		0A3EAA531BE8A52A0019DD90 /* CZViewControllerTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA521BE8A52A0019DD90 /* CZViewControllerTransitionUITests.m */; };
 		0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81E61BE9DC0400D5B332 /* CZBaseAnimator.m */; };
+		0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		0AEE81E61BE9DC0400D5B332 /* CZBaseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseAnimator.m; sourceTree = "<group>"; };
 		0AEE81E71BE9DC0400D5B332 /* CZAnimatorCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAnimatorCreate.h; sourceTree = "<group>"; };
 		0AEE81E81BE9DC0400D5B332 /* UIViewController+CZAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAnimator.h"; sourceTree = "<group>"; };
+		0AEE81EA1BE9DE6900D5B332 /* CZCurlAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCurlAnimator.h; sourceTree = "<group>"; };
+		0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCurlAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 			children = (
 				0AEE81E51BE9DC0400D5B332 /* CZBaseAnimator.h */,
 				0AEE81E61BE9DC0400D5B332 /* CZBaseAnimator.m */,
+				0AEE81EA1BE9DE6900D5B332 /* CZCurlAnimator.h */,
+				0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */,
 				0A3EAA351BE8A52A0019DD90 /* ViewController.m in Sources */,
 				0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */,
 				0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */,
