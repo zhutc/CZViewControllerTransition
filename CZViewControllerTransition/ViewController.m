@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CZBaseAnimator.h"
+#import "UIViewController+CZAnimator.h"
 @interface ViewController ()
 @end
 
@@ -30,18 +30,16 @@
 }
 - (id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)pushViewControllerTransitionAnimator
 {
-    CZBaseAnimator* animator  =  [CZBaseAnimator new];
-    animator.animatorType = CZBaseAnimatorTransitionTypePush;
-    self.pushAnimator = animator;
+
+    self.pushAnimator = CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionTypePush);
     return self.pushAnimator;
 }
 
 
 -(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)popViewControllerTransitionAnimator
 {
-    CZBaseAnimator* animator = [CZBaseAnimator new];
-    animator.animatorType = CZBaseAnimatorTransitionTypePop;
-    self.popAnimator = animator;
+ 
+    self.popAnimator = CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionTypePop);
     
     return self.popAnimator;
 }

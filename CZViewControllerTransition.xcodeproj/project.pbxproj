@@ -54,6 +54,8 @@
 		0A3EAA541BE8A52A0019DD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EAA601BE8AD990019DD90 /* CZBaseAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBaseAnimator.h; sourceTree = "<group>"; };
 		0A3EAA611BE8AD990019DD90 /* CZBaseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBaseAnimator.m; sourceTree = "<group>"; };
+		0AEE81DD1BE9D58700D5B332 /* UIViewController+CZAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAnimator.h"; sourceTree = "<group>"; };
+		0AEE81DE1BE9D69500D5B332 /* CZAnimatorCreate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAnimatorCreate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,8 @@
 				0A3EAA341BE8A52A0019DD90 /* ViewController.m */,
 				0A3EAA601BE8AD990019DD90 /* CZBaseAnimator.h */,
 				0A3EAA611BE8AD990019DD90 /* CZBaseAnimator.m */,
+				0AEE81DD1BE9D58700D5B332 /* UIViewController+CZAnimator.h */,
+				0AEE81DE1BE9D69500D5B332 /* CZAnimatorCreate.h */,
 				0A3EAA361BE8A52A0019DD90 /* Main.storyboard */,
 				0A3EAA391BE8A52A0019DD90 /* Assets.xcassets */,
 				0A3EAA3B1BE8A52A0019DD90 /* LaunchScreen.storyboard */,
@@ -504,6 +508,7 @@
 				0A3EAA591BE8A52A0019DD90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A3EAA5A1BE8A52A0019DD90 /* Build configuration list for PBXNativeTarget "CZViewControllerTransitionTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +517,7 @@
 				0A3EAA5C1BE8A52A0019DD90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A3EAA5D1BE8A52A0019DD90 /* Build configuration list for PBXNativeTarget "CZViewControllerTransitionUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +526,7 @@
 				0A3EAA5F1BE8A52A0019DD90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
