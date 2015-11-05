@@ -64,6 +64,8 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         toVCEndTransform = CGAffineTransformIdentity;
     }
     
+    
+    
     toVC.view.transform = toVCBeginTransform;
     fromVC.view.transform = fromVCBeginTransform;
     
@@ -73,7 +75,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
     
     [UIView animateWithDuration:duration
                           delay:0.f
-                        options:UIViewAnimationOptionCurveEaseInOut
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          toVC.view.alpha = toVCEndAlpha;
                          fromVC.view.alpha = fromVCEndAlpha;

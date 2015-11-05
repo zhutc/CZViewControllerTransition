@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A09A6161BEB050E00795532 /* CZMaskAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09A6151BEB050E00795532 /* CZMaskAnimator.m */; };
 		0A270AD71BEAF3F000DC476C /* CZZoomAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A270AD61BEAF3F000DC476C /* CZZoomAnimator.m */; };
 		0A3EAA2F1BE8A52A0019DD90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA2E1BE8A52A0019DD90 /* main.m */; };
 		0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EAA311BE8A52A0019DD90 /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A09A6141BEB050E00795532 /* CZMaskAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMaskAnimator.h; sourceTree = "<group>"; };
+		0A09A6151BEB050E00795532 /* CZMaskAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMaskAnimator.m; sourceTree = "<group>"; };
 		0A270AD51BEAF3F000DC476C /* CZZoomAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZZoomAnimator.h; sourceTree = "<group>"; };
 		0A270AD61BEAF3F000DC476C /* CZZoomAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZZoomAnimator.m; sourceTree = "<group>"; };
 		0A3EAA2A1BE8A52A0019DD90 /* CZViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +184,8 @@
 				0AEE81EE1BE9F29500D5B332 /* CZBackScaleAnimator.m */,
 				0A270AD51BEAF3F000DC476C /* CZZoomAnimator.h */,
 				0A270AD61BEAF3F000DC476C /* CZZoomAnimator.m */,
+				0A09A6141BEB050E00795532 /* CZMaskAnimator.h */,
+				0A09A6151BEB050E00795532 /* CZMaskAnimator.m */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			files = (
 				0A270AD71BEAF3F000DC476C /* CZZoomAnimator.m in Sources */,
 				0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */,
+				0A09A6161BEB050E00795532 /* CZMaskAnimator.m in Sources */,
 				0A3EAA351BE8A52A0019DD90 /* ViewController.m in Sources */,
 				0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */,
 				0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */,

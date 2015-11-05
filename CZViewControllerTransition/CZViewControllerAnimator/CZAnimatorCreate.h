@@ -69,8 +69,8 @@ CZAnimatorCreateInterfaceExtern(CZBackScaleAnimator);
 //同时做缩放动画 , 同大同小
 CZAnimatorCreateInterfaceExtern(CZZoomAnimator);
 
-
-
+//mask 动画 设置layer.mask  = shapeLayer
+CZAnimatorCreateInterfaceExtern(CZMaskAnimator);
 
 #endif
 

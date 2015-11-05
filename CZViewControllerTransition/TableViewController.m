@@ -21,6 +21,7 @@
                       @"CZCurlAnimator"
                       ,@"CZBackScaleAnimator"
                       ,@"CZZoomAnimator"
+                      ,@"CZMaskAnimator"
                       , nil];
 
     [super viewDidLoad];
