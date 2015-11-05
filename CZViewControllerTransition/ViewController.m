@@ -58,6 +58,10 @@
     {
         self.pushAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePush);
     }
+    else if ([self.animatorClassName isEqualToString:@"CZZoomAnimator"])
+    {
+        self.pushAnimator = CZAnimatorCreate_CZZoomAnimator(CZBaseAnimatorTransitionTypePush);
+    }
 
     
     return self.pushAnimator;
@@ -73,6 +77,10 @@
     }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
     {
         self.popAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePop);
+    }
+    else if ([self.animatorClassName isEqualToString:@"CZZoomAnimator"])
+    {
+        self.popAnimator = CZAnimatorCreate_CZZoomAnimator(CZBaseAnimatorTransitionTypePop);
     }
     
     return self.popAnimator;

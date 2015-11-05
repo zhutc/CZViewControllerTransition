@@ -13,8 +13,8 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
 {
     CZBackScaleAnimator* animator = [CZBackScaleAnimator new];
     animator.animatorType = type;
-    animator.behindViewAlpha = 0.5f;
-    animator.behindViewScale = 0.5f;
+    animator.backViewAlpha = 0.5f;
+    animator.backViewScale = 0.5f;
     
     
     return animator;
@@ -57,12 +57,13 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
               initialSpringVelocity:0.1
                             options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                             fromVC.view.transform = CGAffineTransformScale(fromVC.view.transform, self.behindViewScale, self.behindViewScale);
-                             fromVC.view.alpha = self.behindViewAlpha;
+                             fromVC.view.transform = CGAffineTransformScale(fromVC.view.transform, self.backViewScale, self.backViewScale);
+                             fromVC.view.alpha = self.backViewAlpha;
                              
-                             toVC.view.frame = CGRectMake(0,0,
-                                                                      CGRectGetWidth(toVC.view.frame),
-                                                                      CGRectGetHeight(toVC.view.frame));
+                             toVC.view.frame = CGRectMake(0,
+                                                          0,
+                                                          CGRectGetWidth(toVC.view.frame),
+                                                          CGRectGetHeight(toVC.view.frame));
                          } completion:^(BOOL finished) {
                              fromVC.view.alpha = 1.0f;
                              fromVC.view.transform = CGAffineTransformIdentity;
@@ -75,10 +76,10 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         [containView addSubview:toVC.view];        
         [containView bringSubviewToFront:fromVC.view];
         
-        toVC.view.layer.transform = CATransform3DScale(toVC.view.layer.transform, self.behindViewScale, self.behindViewScale, 1);
+        toVC.view.layer.transform = CATransform3DScale(toVC.view.layer.transform, self.backViewScale, self.backViewScale, 1);
         
         
-        toVC.view.alpha = self.behindViewAlpha;
+        toVC.view.alpha = self.backViewAlpha;
         
         CGRect endRect;
         

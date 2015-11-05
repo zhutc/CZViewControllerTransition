@@ -50,25 +50,26 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
                                     CZAppend(ClassName) (CZBaseAnimatorTransitionType type) \
 
 
-
-
-
-
-
 /**
  **  定义具体的动画器获取C函数
  **/
 #ifdef CZAnimatorCreateInterfaceExtern//(ClassName)
-//翻页动画
-CZAnimatorCreateInterfaceExtern(CZCurlAnimator);
-//一个做缩放，一个做spring frame
-CZAnimatorCreateInterfaceExtern(CZBackScaleAnimator);
 
 
 /*
  //翻页动画
  extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionType type);
  */
+
+//翻页动画
+CZAnimatorCreateInterfaceExtern(CZCurlAnimator);
+//一个做缩放，一个做spring frame
+CZAnimatorCreateInterfaceExtern(CZBackScaleAnimator);
+
+//同时做缩放动画 , 同大同小
+CZAnimatorCreateInterfaceExtern(CZZoomAnimator);
+
+
 
 
 #endif

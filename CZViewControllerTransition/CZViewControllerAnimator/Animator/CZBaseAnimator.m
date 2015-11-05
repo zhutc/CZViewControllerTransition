@@ -8,7 +8,7 @@
 
 #import "CZBaseAnimator.h"
 
-/****  快速获取动画器，样例实现，这样写的目的是隐蔽 CZBaseAnimator.h 头文件暴露 ****/
+/****  快速获取动画器，样例实现，这样写的目的是隐蔽 CZBaseAnimator.h 头文件 ****/
 /*
 id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionType type)
 {

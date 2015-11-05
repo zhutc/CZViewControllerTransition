@@ -20,6 +20,7 @@
     self.dataArray = [NSMutableArray arrayWithObjects:
                       @"CZCurlAnimator"
                       ,@"CZBackScaleAnimator"
+                      ,@"CZZoomAnimator"
                       , nil];
 
     [super viewDidLoad];

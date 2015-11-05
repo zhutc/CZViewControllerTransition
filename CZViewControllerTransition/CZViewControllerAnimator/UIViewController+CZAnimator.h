@@ -189,11 +189,11 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
         Method orginalMd = class_getInstanceMethod(hockClass, orginalSEL);
         Method newMd = class_getInstanceMethod(hockClass, newSEL);
         
-        BOOL isNewMdIsImp = class_addMethod(hockClass,
+        BOOL isSuperIMP = class_addMethod(hockClass,
                                             orginalSEL,
                                             class_getMethodImplementation(hockClass, newSEL),
                                             method_getTypeEncoding(newMd));
-        if (isNewMdIsImp) {
+        if (isSuperIMP) {
             
             class_replaceMethod(hockClass,
                                 newSEL,
@@ -213,7 +213,7 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
 -(UIViewController *)CZAnimator_popViewControllerAnimated:(BOOL)animated
 {
     id<UINavigationControllerDelegate> animator = self.topViewController.popViewControllerTransitionAnimator;
-    if (animator) {
+    if (animator && [animator conformsToProtocol:@protocol(UINavigationControllerDelegate)]) {
         self.delegate = animator;
     }
     return  [self CZAnimator_popViewControllerAnimated:animated];
@@ -222,7 +222,7 @@ static char* UIViewController_CZAnimator_PopKey = "UIViewController_CZAnimator_P
 -(void)CZAnimator_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     id<UINavigationControllerDelegate> animator = viewController.pushViewControllerTransitionAnimator;
-    if (animator) {
+    if (animator && [animator conformsToProtocol:@protocol(UINavigationControllerDelegate)]) {
         self.delegate = animator;
     }
     [self CZAnimator_pushViewController:viewController animated:animated];

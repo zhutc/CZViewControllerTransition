@@ -9,8 +9,8 @@
 #import "CZBaseAnimator.h"
 
 @interface CZBackScaleAnimator : CZBaseAnimator
-@property(nonatomic , assign) CGFloat behindViewScale;
-@property(nonatomic , assign) CGFloat behindViewAlpha;
+@property(nonatomic , assign) CGFloat backViewScale;
+@property(nonatomic , assign) CGFloat backViewAlpha;
 
 @end
 

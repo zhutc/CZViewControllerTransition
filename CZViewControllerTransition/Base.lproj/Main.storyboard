@@ -67,11 +67,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLo-XP-hzL">
-                                <rect key="frame" x="283" y="164" width="34" height="30"/>
+                                <rect key="frame" x="270" y="120" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.60460503529999998" blue="0.65769327450000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="p4L-2e-K1L"/>
+                                    <constraint firstAttribute="width" constant="60" id="p4L-2e-K1L"/>
                                     <constraint firstAttribute="height" constant="30" id="yAe-93-r8o"/>
                                 </constraints>
                                 <state key="normal" title="push">
@@ -82,11 +82,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSI-x2-ZRG">
-                                <rect key="frame" x="285" y="254" width="30" height="30"/>
+                                <rect key="frame" x="270" y="210" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.60460503529999998" blue="0.65769327450000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="K9f-Mc-g6t"/>
+                                    <constraint firstAttribute="width" constant="60" id="K9f-Mc-g6t"/>
                                     <constraint firstAttribute="height" constant="30" id="LfQ-58-VZn"/>
                                 </constraints>
                                 <state key="normal" title="pop">
