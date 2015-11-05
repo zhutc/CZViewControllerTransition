@@ -46,7 +46,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAn
     [self animateTransition:transitionContext
          fromViewController:fromVC
            toViewController:toVC
-                containView:superView
+              containerView:superView
                    duration:duration];
 
 
@@ -62,7 +62,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAn
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
       fromViewController:(UIViewController *)fromVC
         toViewController:(UIViewController *)toVC
-             containView:(UIView *)containView
+           containerView:(UIView *)containView
                 duration:(NSTimeInterval)duration
 {
     NSAssert(![self isMemberOfClass:[CZBaseAnimator class]],@"***********************************\n请使用CZBaseAnimator的子类，并重载|\nanimateTransition:\nfromViewController:\ntoViewController:\ncontainView:\nduration: |方法\n***********************************" );

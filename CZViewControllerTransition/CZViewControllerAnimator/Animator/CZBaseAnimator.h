@@ -19,7 +19,7 @@
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
       fromViewController:(UIViewController*)fromVC
         toViewController:(UIViewController*)toVC
-             containView:(UIView*)containView
+             containerView:(UIView*)containView
                 duration:(NSTimeInterval)duration;
 
 @end
