@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 #import "UIViewController+CZAnimator.h"
+#import "CZTransitionManager.h"
 @interface ViewController ()
+{
+    CZTransitionManager* popManager;
+    CZTransitionManager* pushManager;
+    
+}
 @end
 
 @implementation ViewController
@@ -52,6 +58,7 @@
 
 - (id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)pushViewControllerTransitionAnimator
 {
+    
     if ([self.animatorClassName isEqualToString:@"CZCurlAnimator"]) {
         self.pushAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePush);
     }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
@@ -67,7 +74,11 @@
     }
 
     
-    return self.pushAnimator;
+//    return self.pushAnimator;
+    /* */
+    pushManager =  [CZTransitionManager transitionManagerWithAnimator:self.pushAnimator
+                                               viewController:self];
+    return pushManager;
 }
 
 
@@ -89,7 +100,10 @@
         self.popAnimator = CZAnimatorCreate_CZMaskAnimator(CZBaseAnimatorTransitionTypePop);
     }
     
-    return self.popAnimator;
+//    return self.popAnimator;
+    popManager =  [CZTransitionManager transitionManagerWithAnimator:self.popAnimator
+                                               viewController:self];
+    return popManager;
 }
 
 -(IBAction)push:(id)sender

@@ -48,11 +48,13 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         case CZBaseAnimatorTransitionTypePush:
         {
             type = UIViewAnimationTransitionCurlDown;
-//            [fromVC];
         }
             break;
         case CZBaseAnimatorTransitionTypePop:
+        {
             type = UIViewAnimationTransitionCurlUp;
+
+        }
             break;
         default:
             break;

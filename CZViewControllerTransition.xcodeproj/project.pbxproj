@@ -21,6 +21,8 @@
 		0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81EB1BE9DE6900D5B332 /* CZCurlAnimator.m */; };
 		0AEE81EF1BE9F29500D5B332 /* CZBackScaleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81EE1BE9F29500D5B332 /* CZBackScaleAnimator.m */; };
 		0AEE81F21BEA00B400D5B332 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE81F11BEA00B400D5B332 /* TableViewController.m */; };
+		0AFB9A2E1BEC764500A8E821 /* CZTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB9A2D1BEC764500A8E821 /* CZTransitionManager.m */; };
+		0AFB9A321BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB9A311BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		0AEE81EE1BE9F29500D5B332 /* CZBackScaleAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBackScaleAnimator.m; sourceTree = "<group>"; };
 		0AEE81F01BEA00B400D5B332 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		0AEE81F11BEA00B400D5B332 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		0AFB9A2C1BEC764500A8E821 /* CZTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTransitionManager.h; sourceTree = "<group>"; };
+		0AFB9A2D1BEC764500A8E821 /* CZTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTransitionManager.m; sourceTree = "<group>"; };
+		0AFB9A301BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		0AFB9A311BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,8 @@
 		0AEE81E31BE9DBD800D5B332 /* CZViewControllerAnimator */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB9A2F1BEC808700A8E821 /* interactiveTransition */,
+				0AFB9A2B1BEC759900A8E821 /* tansitionManager */,
 				0AEE81E41BE9DC0400D5B332 /* Animator */,
 				0AEE81E71BE9DC0400D5B332 /* CZAnimatorCreate.h */,
 				0AEE81E81BE9DC0400D5B332 /* UIViewController+CZAnimator.h */,
@@ -188,6 +196,24 @@
 				0A09A6151BEB050E00795532 /* CZMaskAnimator.m */,
 			);
 			path = Animator;
+			sourceTree = "<group>";
+		};
+		0AFB9A2B1BEC759900A8E821 /* tansitionManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB9A2C1BEC764500A8E821 /* CZTransitionManager.h */,
+				0AFB9A2D1BEC764500A8E821 /* CZTransitionManager.m */,
+			);
+			path = tansitionManager;
+			sourceTree = "<group>";
+		};
+		0AFB9A2F1BEC808700A8E821 /* interactiveTransition */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB9A301BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.h */,
+				0AFB9A311BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.m */,
+			);
+			path = interactiveTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFB9A321BEC863E00A8E821 /* CZPercentDrivenInteractiveTransition.m in Sources */,
 				0A270AD71BEAF3F000DC476C /* CZZoomAnimator.m in Sources */,
 				0AEE81EC1BE9DE6900D5B332 /* CZCurlAnimator.m in Sources */,
 				0A09A6161BEB050E00795532 /* CZMaskAnimator.m in Sources */,
+				0AFB9A2E1BEC764500A8E821 /* CZTransitionManager.m in Sources */,
 				0A3EAA351BE8A52A0019DD90 /* ViewController.m in Sources */,
 				0A3EAA321BE8A52A0019DD90 /* AppDelegate.m in Sources */,
 				0AEE81E91BE9DC0400D5B332 /* CZBaseAnimator.m in Sources */,
