@@ -7,10 +7,10 @@
 //
 
 #import "CZZoomAnimator.h"
-id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZZoomAnimator)(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZZoomAnimator)(BOOL isOut)
 {
     CZZoomAnimator* animator = [CZZoomAnimator new];
-    animator.animatorType = type;
+    animator.isOut = isOut;
     animator.transformScale = 0.3f;
     return animator;
 }
@@ -41,7 +41,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
     CGFloat toVCEndAlpha = 1.0;
     
     
-    if (self.animatorType == CZBaseAnimatorTransitionTypePush) {
+    if (self.isOut == NO) {
         
         fromVCBeginTransform = CGAffineTransformIdentity;
         fromVCEndTransform = CGAffineTransformMakeScale(1 - self.transformScale, 1 - self.transformScale);
@@ -53,7 +53,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         [containView addSubview:toVC.view];
 
     }
-    else if (self.animatorType == CZBaseAnimatorTransitionTypePop)
+    else if (self.isOut == YES)
     {
         [containView insertSubview:toVC.view belowSubview:fromVC.view];
         

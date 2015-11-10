@@ -9,10 +9,10 @@
 #import "CZCurlAnimator.h"
 
 
-id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZCurlAnimator)(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZCurlAnimator)(BOOL isOut)
 {
     CZCurlAnimator* animator = [CZCurlAnimator new];
-    animator.animatorType = type;
+    animator.isOut = isOut;
     return animator;
 }
 
@@ -44,13 +44,13 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
     
     
     UIViewAnimationTransition type = UIViewAnimationTransitionCurlDown;
-    switch (self.animatorType) {
-        case CZBaseAnimatorTransitionTypePush:
+    switch (self.isOut) {
+        case NO:
         {
             type = UIViewAnimationTransitionCurlDown;
         }
             break;
-        case CZBaseAnimatorTransitionTypePop:
+        case YES:
         {
             type = UIViewAnimationTransitionCurlUp;
 

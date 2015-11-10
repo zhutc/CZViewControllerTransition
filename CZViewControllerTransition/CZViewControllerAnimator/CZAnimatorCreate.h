@@ -19,11 +19,11 @@
 
 //过度类型
 typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
-    CZBaseAnimatorTransitionTypeNone,
-    CZBaseAnimatorTransitionTypePush,
-    CZBaseAnimatorTransitionTypePop,
-    CZBaseAnimatorTransitionTypePresent,
-    CZBaseAnimatorTransitionTypeDismiss
+    CZBaseAnimatorTransitionTypeNone        = 1 << 0,
+    CZBaseAnimatorTransitionTypePush        = 1 << 1,
+    CZBaseAnimatorTransitionTypePop         = 1 << 2,
+    CZBaseAnimatorTransitionTypePresent     = 1 << 3,
+    CZBaseAnimatorTransitionTypeDismiss     = 1 << 4
 };
 
 
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 /**************
  样例C函数，这样写可以隐蔽具体Animator的头文件
  
- extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionType type);
+ extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(BOOL isOut);
  
  
  注意：CZAnimatorCreate_CZBaseAnimator需要在对应的.m中实现。
@@ -47,7 +47,7 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 #define CZAnimatorCreateInterfaceExtern(ClassName)  \
                 extern \
                         id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning>  \
-                                    CZAppend(ClassName) (CZBaseAnimatorTransitionType type) \
+                                    CZAppend(ClassName) (BOOL isOut) \
 
 
 /**
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger,CZBaseAnimatorTransitionType){
 
 /*
  //翻页动画
- extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionType type);
+ extern id<UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZCurlAnimator(BOOL isOut);
  */
 
 //翻页动画
@@ -73,5 +73,29 @@ CZAnimatorCreateInterfaceExtern(CZZoomAnimator);
 CZAnimatorCreateInterfaceExtern(CZMaskAnimator);
 
 #endif
+
+
+
+
+
+
+/****************  快速获取交互  *****************/
+
+#define CZAppendInteracetive(ClassName) CZInteracetiveCreate_##ClassName //动态生成函数名
+
+#define CZInteracetiveInterfaceExtern(ClassName) \
+                                        id CZAppendInteracetive(CZHorizontalInteractiveTransition)(UIViewController* vc , CZBaseAnimatorTransitionType type)
+
+
+
+
+
+
+#ifdef CZInteracetiveInterfaceExtern
+CZInteracetiveInterfaceExtern(CZHorizontalInteractiveTransition);
+
+
+#endif
+
 
 

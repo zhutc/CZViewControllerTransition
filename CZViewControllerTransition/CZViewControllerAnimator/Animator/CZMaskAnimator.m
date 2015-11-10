@@ -10,10 +10,10 @@
 
 
 
-id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZMaskAnimator)(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZMaskAnimator)(BOOL isOut)
 {
     CZMaskAnimator* animator = [CZMaskAnimator new];
-    animator.animatorType = type;
+    animator.isOut = isOut;
     return animator;
 }
 
@@ -57,7 +57,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
     baseicAnimate.repeatCount = 1;
     baseicAnimate.fillMode = kCAFillModeForwards;
     
-    if (self.animatorType == CZBaseAnimatorTransitionTypePop) {
+    if (self.isOut == YES) {
 
         [containView addSubview:toVC.view];
         toVC.view.layer.mask = maskLayer;
@@ -75,7 +75,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
         [CATransaction commit];
         
     }
-    else if (self.animatorType == CZBaseAnimatorTransitionTypePush)
+    else if (self.isOut == NO)
     {
         
         [containView insertSubview:toVC.view belowSubview:fromVC.view];

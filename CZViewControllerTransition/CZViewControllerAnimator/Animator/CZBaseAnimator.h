@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CZAnimatorCreate.h"
-
-@interface CZBaseAnimator : NSObject<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>
+#import "CZBaseAnimatedTransitioning.h"
+@interface CZBaseAnimator : NSObject<UINavigationControllerDelegate,CZBaseAnimatedTransitioning>
 @property(nonatomic , assign , readwrite) CGFloat duration;
-@property(nonatomic , assign , readwrite) CZBaseAnimatorTransitionType animatorType;
+@property(assign,nonatomic) BOOL isOut; //是否返回 push and dismiss  == YES
+
 
 //subclass must override this method
 // 

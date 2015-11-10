@@ -11,8 +11,7 @@
 #import "CZTransitionManager.h"
 @interface ViewController ()
 {
-    CZTransitionManager* popManager;
-    CZTransitionManager* pushManager;
+    CZTransitionManager* Manager;
     
 }
 @end
@@ -28,29 +27,29 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
-}
-
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
-}
--(void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
-}
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+//}
+//
+//-(void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+//}
+//
+//
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+//}
+//-(void)viewDidDisappear:(BOOL)animated
+//{
+//    [super viewDidDisappear:animated];
+//    NSLog(@"title = %@ %s %s",self.title,class_getName(self.class) , _cmd);
+//}
 
 
 
@@ -60,50 +59,59 @@
 {
     
     if ([self.animatorClassName isEqualToString:@"CZCurlAnimator"]) {
-        self.pushAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePush);
-    }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
+        self.pushAnimator = CZAnimatorCreate_CZCurlAnimator(NO);
+    }
+    else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
     {
-        self.pushAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePush);
+        self.pushAnimator = CZAnimatorCreate_CZBackScaleAnimator(NO);
     }
     else if ([self.animatorClassName isEqualToString:@"CZZoomAnimator"])
     {
-        self.pushAnimator = CZAnimatorCreate_CZZoomAnimator(CZBaseAnimatorTransitionTypePush);
-    }else if ([self.animatorClassName isEqualToString:@"CZMaskAnimator"])
+        self.pushAnimator = CZAnimatorCreate_CZZoomAnimator(NO);
+    }
+    else if ([self.animatorClassName isEqualToString:@"CZMaskAnimator"])
     {
-        self.pushAnimator = CZAnimatorCreate_CZMaskAnimator(CZBaseAnimatorTransitionTypePush);
+        self.pushAnimator = CZAnimatorCreate_CZMaskAnimator(NO);
     }
 
     
 //    return self.pushAnimator;
     /* */
-    pushManager =  [CZTransitionManager transitionManagerWithAnimator:self.pushAnimator
-                                               viewController:self];
-    return pushManager;
+    if (!Manager) {
+        Manager =  [CZTransitionManager new];
+        Manager.transitionInteractive = CZInteracetiveCreate_CZHorizontalInteractiveTransition(self, CZBaseAnimatorTransitionTypePop);
+    }
+    
+    Manager.pushTransitionAnimator = self.pushAnimator;
+    return Manager;
 }
 
 
 -(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)popViewControllerTransitionAnimator
 {
- 
+    
     if ([self.animatorClassName isEqualToString:@"CZCurlAnimator"]) {
-        self.popAnimator = CZAnimatorCreate_CZCurlAnimator(CZBaseAnimatorTransitionTypePop);
+        self.popAnimator = CZAnimatorCreate_CZCurlAnimator(YES);
         
-    }else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
+    }
+    else if ([self.animatorClassName isEqualToString:@"CZBackScaleAnimator"])
     {
-        self.popAnimator = CZAnimatorCreate_CZBackScaleAnimator(CZBaseAnimatorTransitionTypePop);
+        self.popAnimator = CZAnimatorCreate_CZBackScaleAnimator(YES);
     }
     else if ([self.animatorClassName isEqualToString:@"CZZoomAnimator"])
     {
-        self.popAnimator = CZAnimatorCreate_CZZoomAnimator(CZBaseAnimatorTransitionTypePop);
-    }else if ([self.animatorClassName isEqualToString:@"CZMaskAnimator"])
+        self.popAnimator = CZAnimatorCreate_CZZoomAnimator(YES);
+    }
+    else if ([self.animatorClassName isEqualToString:@"CZMaskAnimator"])
     {
-        self.popAnimator = CZAnimatorCreate_CZMaskAnimator(CZBaseAnimatorTransitionTypePop);
+        self.popAnimator = CZAnimatorCreate_CZMaskAnimator(YES);
     }
     
-//    return self.popAnimator;
-    popManager =  [CZTransitionManager transitionManagerWithAnimator:self.popAnimator
-                                               viewController:self];
-    return popManager;
+    if (Manager) {
+        Manager.popTransitionAnimator = self.popAnimator;
+    }
+
+    return Manager;
 }
 
 -(IBAction)push:(id)sender

@@ -10,10 +10,10 @@
 
 /****  快速获取动画器，样例实现，这样写的目的是隐蔽 CZBaseAnimator.h 头文件 ****/
 /*
-id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAnimatorCreate_CZBaseAnimator(BOOL isOut)
 {
     CZBaseAnimator* animator = [CZBaseAnimator new];
-    animator.animatorType = type;
+    animator.isOunt = isOut;
     return animator;
 }
 */

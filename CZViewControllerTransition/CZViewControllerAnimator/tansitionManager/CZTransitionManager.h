@@ -8,18 +8,29 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CZPercentDrivenInteractiveTransition.h"
+#import "CZBaseAnimatedTransitioning.h"
+NS_ASSUME_NONNULL_BEGIN
 @interface CZTransitionManager : NSObject<UINavigationControllerDelegate , UIViewControllerTransitioningDelegate>
 
+@property(nonatomic , strong , readwrite , nullable) id<CZBaseAnimatedTransitioning> pushTransitionAnimator;
+@property(nonatomic , strong , readwrite , nullable) id<CZBaseAnimatedTransitioning> popTransitionAnimator;
+@property(nonatomic , strong , readwrite , nullable) id<CZBaseAnimatedTransitioning> presentTransitionAnimator;
+@property(nonatomic , strong , readwrite , nullable) id<CZBaseAnimatedTransitioning> dismissTransitionAnimator;
+@property(nonatomic , strong , readwrite , nullable) CZPercentDrivenInteractiveTransition* transitionInteractive;
+
+
+
 //获取动画管理器
--(instancetype)initWithAnimator:(id<UIViewControllerAnimatedTransitioning>)aimator
-         interacetiveTransition:(UIPercentDrivenInteractiveTransition*)interaceTransition
-                 viewController:(UIViewController*)viewController;
+-(instancetype)initWithAnimator:(nullable id<CZBaseAnimatedTransitioning>)aimator
+         interacetiveTransition:(nullable CZPercentDrivenInteractiveTransition*)interaceTransition;
 
-+(instancetype)transitionManagerWithAnimator:(id<UIViewControllerAnimatedTransitioning>)aimator
-                      interacetiveTransition:(UIPercentDrivenInteractiveTransition*)interaceTransition
-                              viewController:(UIViewController*)viewController;
++(instancetype)transitionManagerWithAnimator:(nullable id<CZBaseAnimatedTransitioning>)aimator
+                      interacetiveTransition:(nullable CZPercentDrivenInteractiveTransition*)interaceTransition;
 
 
-+(instancetype)transitionManagerWithAnimator:(id<UIViewControllerAnimatedTransitioning>)aimator
-                              viewController:(UIViewController*)viewController;
+
+
+
 @end
+NS_ASSUME_NONNULL_END

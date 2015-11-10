@@ -25,54 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-navigationController:animationControllerForOperation:fromViewController:toViewController:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/UIViewController+CZAnimator.h"
-            timestampString = "468493504.815762"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "-CZAnimator_pushViewController:animated:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/Animator/CZCurlAnimator.m"
-            timestampString = "468493674.457436"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-animateTransition:fromViewController:toViewController:containerView:duration:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/Animator/CZBaseAnimator.m"
             timestampString = "468494126.229417"
             startingColumnNumber = "9223372036854775807"
@@ -90,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-animationControllerForPresentedController:presentingController:sourceController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-animationControllerForDismissedController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-interactionControllerForPresentation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-interactionControllerForDismissal:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "@implementation CZTransitionManager"
             landmarkType = "3">
          </BreakpointContent>
@@ -166,15 +118,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-navigationController:interactionControllerForAnimationController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -182,48 +134,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/Animator/CZCurlAnimator.m"
-            timestampString = "468495688.882197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-animateTransition:fromViewController:toViewController:containerView:duration:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/Animator/CZCurlAnimator.m"
-            timestampString = "468495688.882197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-animateTransition:fromViewController:toViewController:containerView:duration:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468496975.274138"
+            timestampString = "468817844.325264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-addPanGestureRecognizer:forViewController:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-navigationController:animationControllerForOperation:fromViewController:toViewController:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -233,29 +153,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/UIViewController+CZAnimator.h"
-            timestampString = "468495686.529781"
+            filePath = "CZViewControllerTransition/CZViewControllerAnimator/Animator/CZZoomAnimator.m"
+            timestampString = "468818078.879018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "-CZAnimator_popViewControllerAnimated:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CZViewControllerTransition/CZViewControllerAnimator/tansitionManager/CZTransitionManager.m"
-            timestampString = "468497050.931761"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-handlePanGestureRecognizer:"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-animateTransition:fromViewController:toViewController:containerView:duration:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

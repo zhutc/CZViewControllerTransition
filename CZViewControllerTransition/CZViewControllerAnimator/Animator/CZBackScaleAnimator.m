@@ -9,10 +9,10 @@
 #import "CZBackScaleAnimator.h"
 
 
-id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZBackScaleAnimator)(CZBaseAnimatorTransitionType type)
+id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAppend(CZBackScaleAnimator)(BOOL isOut)
 {
     CZBackScaleAnimator* animator = [CZBackScaleAnimator new];
-    animator.animatorType = type;
+    animator.isOut = isOut;
     animator.backViewAlpha = 0.5f;
     animator.backViewScale = 0.5f;
     
@@ -33,7 +33,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
 
     
     
-    if (self.animatorType == CZBaseAnimatorTransitionTypePush) {
+    if (self.isOut == NO) {
         
         CGRect startRect;
         
@@ -99,7 +99,7 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
                               delay:0
              usingSpringWithDamping:0.8
               initialSpringVelocity:0.1
-                            options:UIViewAnimationOptionCurveEaseOut
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                          
                              toVC.view.alpha = 1.0f;
@@ -107,7 +107,8 @@ id <UINavigationControllerDelegate , UIViewControllerAnimatedTransitioning> CZAp
                              toVC.view.layer.transform = CATransform3DIdentity;
 
                          } completion:^(BOOL finished) {
-
+                             toVC.view.alpha = 1.0f;
+                             toVC.view.layer.transform = CATransform3DIdentity;
                              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                          }];
     }
